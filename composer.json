@@ -1,8 +1,13 @@
 {
     "name": "dansmaculotte/colissimo-php",
-    "description": "Colissimo Web Services Library",
+    "description": "Colissimo Web Services PHP library",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "colissimo",
+        "colissimo-webservices"
+    ],
+    "homepage": "https://github.com/dansmaculotte/colissimo-php",
     "authors": [
         {
             "name": "Gaël Reyrol",
@@ -15,6 +20,7 @@
         }
     },
     "require": {
+        "php": "^7.0",
         "ext-soap": "*",
         "zendframework/zend-soap": "^2.7",
         "guzzlehttp/guzzle": "^6.3",
@@ -22,5 +28,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^7.4"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
     }
 }
