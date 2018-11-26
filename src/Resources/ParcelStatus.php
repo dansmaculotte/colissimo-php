@@ -1,6 +1,6 @@
 <?php
 
-namespace DansMaCulotte\ColissimoWebServices\Responses;
+namespace DansMaCulotte\ColissimoWebServices\Resources;
 
 class ParcelStatus
 {
@@ -22,6 +22,6 @@ class ParcelStatus
         $this->site = $parameters['eventSite'];
         $this->city = $parameters['recipientCity'];
         $this->zipCode = $parameters['recipientZipCode'];
-        $this->contryCode = $parameters['recipientCountryCode'];
+        $this->countryCode = $parameters['recipientCountryCode'];
     }
 }

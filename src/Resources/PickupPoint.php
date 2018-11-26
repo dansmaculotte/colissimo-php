@@ -1,6 +1,6 @@
 <?php
 
-namespace DansMaCulotte\ColissimoWebServices\Responses;
+namespace DansMaCulotte\ColissimoWebServices\Resources;
 
 use Spatie\OpeningHours\OpeningHours;
 
@@ -70,11 +70,35 @@ class PickupPoint
         );
 
         if (isset($parameters->listeConges)) {
-            $this->holidays = array(
-                'start' => $parameters->listeConges->calendarDeDebut,
-                'end' => $parameters->listeConges->calendarDeFin,
-                'number' => $parameters->listeConges->numero,
-            );    
+
+            $holidays = array();
+            if (is_object($parameters->listeConges)) {
+
+                array_push(
+                    $holidays,
+                    array(
+                        'start' => $parameters->listeConges->calendarDeDebut,
+                        'end' => $parameters->listeConges->calendarDeFin,
+                        'number' => $parameters->listeConges->numero,
+                    )
+                );  
+
+            } else {
+
+                foreach ($parameters->listeConges as $conges) {
+                    array_push(
+                        $holidays,
+                        array(
+                            'start' => $conges->calendarDeDebut,
+                            'end' => $conges->calendarDeFin,
+                            'number' => $conges->numero,
+                        )
+                    );  
+                }
+
+            }
+
+            $this->holidays = $holidays;
         }
 
         $this->maxWeight = $parameters->poidsMaxi;
