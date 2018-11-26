@@ -3,7 +3,7 @@
 namespace DansMaCulotte\ColissimoWebServices;
 
 use DansMaCulotte\ColissimoWebServices\Client;
-use DansMaCulotte\ColissimoWebServices\Responses\PickupPoint;
+use DansMaCulotte\ColissimoWebServices\Resources\PickupPoint;
 
 /**
  * Implementation of Delivery Choice Web Service

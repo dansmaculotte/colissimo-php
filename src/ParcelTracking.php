@@ -3,7 +3,7 @@
 namespace DansMaCulotte\ColissimoWebServices;
 
 use DansMaCulotte\ColissimoWebServices\Client;
-use DansMaCulotte\ColissimoWebServices\ParcelStatus;
+use DansMaCulotte\ColissimoWebServices\Resources\ParcelStatus;
 
 /**
  * Implementation of Parcel Tracking Web Service
