@@ -1,4 +1,4 @@
-# Colissimo PHP
+# Colissimo Web Sercices PHP SDK
 
 This library aims to facilitate the usage of Colissimo Web Services
 
