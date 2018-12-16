@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use DansMaCulotte\ColissimoWebServices\DeliveryChoice;
+use DansMaCulotte\Colissimo\DeliveryChoice;
 
 require 'Credentials.php';
 

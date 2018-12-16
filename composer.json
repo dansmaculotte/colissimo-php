@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "DansMaCulotte\\ColissimoWebServices\\": "src/"
+            "DansMaCulotte\\Colissimo\\": "src/"
         }
     },
     "require": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace DansMaCulotte\ColissimoWebServices\Resources;
+namespace DansMaCulotte\Colissimo\Resources;
 
 class ParcelStatus
 {

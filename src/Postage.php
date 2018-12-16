@@ -1,8 +1,8 @@
 <?php
 
-namespace DansMaCulotte\ColissimoWebServices;
+namespace DansMaCulotte\Colissimo;
 
-use DansMaCulotte\ColissimoWebServices\Client;
+use DansMaCulotte\Colissimo\Client;
 
 /**
  * Implementation of Postage Web Service

@@ -1,6 +1,6 @@
 <?php
 
-namespace DansMaCulotte\ColissimoWebServices;
+namespace DansMaCulotte\Colissimo;
 
 use Zend\Soap\Client as SoapClient;
 use GuzzleHttp\Client as HttpClient;
@@ -47,11 +47,11 @@ class Client
         $response = $client->request('GET', self::STATUS_URL);
 
         if ($response->getStatusCode() != 200) {
-            throw new \Exception('Colissimo Delivery Choice Status Code Error');
+            throw new \Exception('Colissimo Web Services Status Code Error');
         }
 
         if (preg_match_all('/OK/m', $response->getBody()) == false) {
-            throw new \Exception('Colissimo Delivery Choice KO');
+            throw new \Exception('Colissimo Web Services KO');
         }
 
         return true;

@@ -1,9 +1,9 @@
 <?php
 
-namespace DansMaCulotte\ColissimoWebServices;
+namespace DansMaCulotte\Colissimo;
 
-use DansMaCulotte\ColissimoWebServices\Client;
-use DansMaCulotte\ColissimoWebServices\Resources\PickupPoint;
+use DansMaCulotte\Colissimo\Client;
+use DansMaCulotte\Colissimo\Resources\PickupPoint;
 
 /**
  * Implementation of Delivery Choice Web Service

@@ -1,9 +1,9 @@
 <?php
 
-namespace DansMaCulotte\ColissimoWebServices;
+namespace DansMaCulotte\Colissimo;
 
-use DansMaCulotte\ColissimoWebServices\Client;
-use DansMaCulotte\ColissimoWebServices\Resources\ParcelStatus;
+use DansMaCulotte\Colissimo\Client;
+use DansMaCulotte\Colissimo\Resources\ParcelStatus;
 
 /**
  * Implementation of Parcel Tracking Web Service
