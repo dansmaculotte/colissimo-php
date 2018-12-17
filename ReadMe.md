@@ -10,6 +10,11 @@ This library aims to facilitate the usage of Colissimo Web Services
 
 ## Installation
 
+### Requirements
+
+- PHP 7.0
+- Soap Extension
+
 You can install the package via composer:
 
 ``` bash
@@ -60,7 +65,7 @@ $result = $delivery->findPickupPoints(
 print_r($result);
 ```
 
-#### find pickup point by ID
+#### Find pickup point by ID
 
 ```php
 use DansMaCulotte\Colissimo\DeliveryChoice;
