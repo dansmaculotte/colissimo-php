@@ -5,7 +5,7 @@ use DansMaCulotte\Colissimo\DeliveryChoice;
 use DansMaCulotte\Colissimo\Resources\PickupPoint;
 use Carbon\Carbon;
 
-require 'Credentials.php';
+require_once 'Credentials.php';
 
 class DeliveryChoiceTest extends TestCase
 {

@@ -12,11 +12,24 @@ class Postage extends Client
 {
     const SERVICE_URL = 'https://ws.colissimo.fr/sls-ws/SlsServiceWS/2.0?wsdl';
 
+    /**
+     * Construct Method
+     * 
+     * @param array $credentials Contains login and password for authentication
+     * @param array $options     Additional parameters to submit to the web services
+     */
     public function __construct($credentials, $options = array())
     {
         parent::__construct($credentials, self::SERVICE_URL, $options);
     }
 
+    /**
+     * @param string $outputFormat ToDo
+     * @param string $letter       ToDo
+     * @param array  $options      Additional parameters
+     * 
+     * @return Object
+     */
     public function generateLabel($outputFormat, $letter, $options = array())
     {
         $options = array_merge(

@@ -59,13 +59,27 @@ class PickupPoint
 
         $this->openings = OpeningHours::create(
             [
-                'monday' => $this->formatRangeTime($parameters->horairesOuvertureLundi),
-                'tuesday' => $this->formatRangeTime($parameters->horairesOuvertureMardi),
-                'wednesday' => $this->formatRangeTime($parameters->horairesOuvertureMercredi),
-                'thursday' => $this->formatRangeTime($parameters->horairesOuvertureJeudi),
-                'friday' => $this->formatRangeTime($parameters->horairesOuvertureVendredi),
-                'saturday' => $this->formatRangeTime($parameters->horairesOuvertureSamedi),
-                'sunday' => $this->formatRangeTime($parameters->horairesOuvertureDimanche),
+                'monday' => $this->_formatRangeTime(
+                    $parameters->horairesOuvertureLundi
+                ),
+                'tuesday' => $this->_formatRangeTime(
+                    $parameters->horairesOuvertureMardi
+                ),
+                'wednesday' => $this->_formatRangeTime(
+                    $parameters->horairesOuvertureMercredi
+                ),
+                'thursday' => $this->_formatRangeTime(
+                    $parameters->horairesOuvertureJeudi
+                ),
+                'friday' => $this->_formatRangeTime(
+                    $parameters->horairesOuvertureVendredi
+                ),
+                'saturday' => $this->_formatRangeTime(
+                    $parameters->horairesOuvertureSamedi
+                ),
+                'sunday' => $this->_formatRangeTime(
+                    $parameters->horairesOuvertureDimanche
+                ),
             ]
         );
 
@@ -113,7 +127,14 @@ class PickupPoint
         $this->sortPlanVersion = $parameters->versionPlanTri;
     }
 
-    private function formatRangeTime($hours)
+    /**
+     * Split Range datetime in two datetimes
+     * 
+     * @param string $hours Range datetime e.g. 09:45-12:30 14:00-18:30
+     * 
+     * @return array
+     */
+    private function _formatRangeTime($hours)
     {
         $partialOpenings = explode(' ', $hours);
 
