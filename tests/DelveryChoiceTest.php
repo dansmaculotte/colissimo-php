@@ -2,6 +2,8 @@
 
 use PHPUnit\Framework\TestCase;
 use DansMaCulotte\Colissimo\DeliveryChoice;
+use DansMaCulotte\Colissimo\Resources\PickupPoint;
+use Carbon\Carbon;
 
 require 'Credentials.php';
 
@@ -17,18 +19,32 @@ class DeliveryChoiceTest extends TestCase
         );
 
         $result = $delivery->findPickupPoints(
-            'Perdreauville',
-            '78484',
+            'Caen',
+            '14000',
             'FR',
-            '26/11/2018',
+            Carbon::now()->format('d/m/Y'),
             array(
-                'address' => '1 Impasse Frere Jacques La belle Cote',
-                'optionInter' => 0,
+                'address' => '7 rue Mélingue',
             )
         );
 
-        print_r($result);
+        $this->assertInternalType('array', $result);
+    }
 
-        // $this->assertTrue($result);
+    public function testDeliveryChoiceByID()
+    {
+        $delivery = new DeliveryChoice(
+            array(
+                'login' => COLISSIMO_LOGIN,
+                'password' => COLISSIMO_PASSWORD,
+            )
+        );
+
+        $result = $delivery->findPickupPointByID(
+            '149390',
+            Carbon::now()->format('d/m/Y')
+        );
+
+        $this->assertInstanceOf(PickupPoint::class, $result);
     }
 }

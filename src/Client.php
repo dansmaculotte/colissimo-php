@@ -14,6 +14,13 @@ class Client
     private $_soapOptions;
     private $_credentials;
 
+    /**
+     * Construct method to build soap client and options
+     * 
+     * @param array  $credentials Contains login and password items
+     * @param string $url         Url to use for SOAP client
+     * @param array  $options     Options to use for SOAP client
+     */
     public function __construct($credentials, $url, $options)
     {
         if (isset($credentials['login']) == false) {
@@ -41,6 +48,11 @@ class Client
         );
     }
 
+    /**
+     * Check Web Services Endpoint and verify if response contains OK string
+     * 
+     * @return bool
+     */
     public static function checkWebServiceStatus()
     {
         $client = new HttpClient();
@@ -57,10 +69,18 @@ class Client
         return true;
     }
 
-    public function soapExec($method, $options)
+    /**
+     * Proxy method to automaticaly inject credentials and options
+     * 
+     * @param array $method Method to with SOAP web services
+     * @param array $params Parameters to send with method
+     * 
+     * @return Object
+     */
+    public function soapExec($method, $params)
     {
         return $this->_soapClient->$method(
-            array_merge($this->_credentials, $options)
+            array_merge($this->_credentials, $params)
         );
     }
 }
