@@ -35,7 +35,7 @@ class ParcelTracking extends Client
      * @return ParcelStatus
      * @throws \Exception
      */
-    public function getStatusByID($id, $options = array())
+    public function getStatusByID(string $id, array $options = array())
     {
         $options = array_merge(
             array(

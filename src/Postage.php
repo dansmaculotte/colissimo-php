@@ -20,20 +20,21 @@ class Postage extends Client
      *
      * @throws \Exception
      */
-    public function __construct($credentials, $options = array())
+    public function __construct(array $credentials, array $options = array())
     {
         parent::__construct($credentials, self::SERVICE_URL, $options);
     }
 
     /**
-     * @param string $outputFormat ToDo
-     * @param string $letter       ToDo
-     * @param array  $options      Additional parameters
-     * 
+     * @param array $outputFormat ToDo
+     * @param array $letter       ToDo
+     * @param bool  $check        Perform dry run instead of real method usage
+     * @param array $options      Additional parameters
+     *
      * @return Object
      * @throws \Exception
      */
-    public function generateLabel($outputFormat, $letter, $options = array())
+    public function generateLabel(array $outputFormat, array $letter, bool $check = false, $options = array())
     {
         $options = array_merge(
             array(
@@ -44,7 +45,7 @@ class Postage extends Client
         );
 
         $result = $this->soapExec(
-            'generateLabel',
+            ($check) ? 'checkGenerateLabel' : 'generateLabel',
             $options
         );
 
