@@ -18,8 +18,10 @@ class DeliveryChoice extends Client
      * 
      * @param array $credentials Contains login and password for authentication
      * @param array $options     Additional parameters to submit to the web services
+     *
+     * @throws \Exception
      */
-    public function __construct($credentials, $options = array())
+    public function __construct(array $credentials, array $options = array())
     {
         parent::__construct($credentials, self::SERVICE_URL, $options);
     }
@@ -34,8 +36,9 @@ class DeliveryChoice extends Client
      * @param array  $options      Additional parameters
      * 
      * @return PickupPoint[]
+     * @throws \Exception
      */
-    public function findPickupPoints($city, $zipCode, $countryCode, $shippingDate, $options = array())
+    public function findPickupPoints(string $city, string $zipCode, string $countryCode, string $shippingDate, array $options = array())
     {
         $options = array_merge(
             array(
@@ -78,8 +81,9 @@ class DeliveryChoice extends Client
      * @param array  $options      Additional parameters
      * 
      * @return PickupPoint
+     * @throws \Exception
      */
-    public function findPickupPointByID($id, $shippingDate, $options = array())
+    public function findPickupPointByID(int $id, string $shippingDate, array $options = array())
     {
         $options = array_merge(
             array(

@@ -20,6 +20,8 @@ class Client
      * @param array  $credentials Contains login and password items
      * @param string $url         Url to use for SOAP client
      * @param array  $options     Options to use for SOAP client
+     *
+     * @throws \Exception
      */
     public function __construct($credentials, $url, $options)
     {
@@ -52,6 +54,7 @@ class Client
      * Check Web Services Endpoint and verify if response contains OK string
      * 
      * @return bool
+     * @throws \GuzzleHttp\Exception\GuzzleException|\Exception
      */
     public static function checkWebServiceStatus()
     {
@@ -77,7 +80,7 @@ class Client
      * 
      * @return Object
      */
-    public function soapExec($method, $params)
+    public function soapExec(string $method, array $params)
     {
         return $this->_soapClient->$method(
             array_merge($this->_credentials, $params)
