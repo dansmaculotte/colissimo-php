@@ -18,8 +18,10 @@ class ParcelTracking extends Client
      * 
      * @param array $credentials Contains login and password for authentication
      * @param array $options     Additional parameters to submit to the web services
+     *
+     * @throws \Exception
      */
-    public function __construct($credentials, $options = array())
+    public function __construct(array $credentials, array $options = array())
     {
         parent::__construct($credentials, self::SERVICE_URL, $options);
     }
@@ -31,6 +33,7 @@ class ParcelTracking extends Client
      * @param array  $options Additional parameters
      * 
      * @return ParcelStatus
+     * @throws \Exception
      */
     public function getStatusByID($id, $options = array())
     {

@@ -17,6 +17,8 @@ class Postage extends Client
      * 
      * @param array $credentials Contains login and password for authentication
      * @param array $options     Additional parameters to submit to the web services
+     *
+     * @throws \Exception
      */
     public function __construct($credentials, $options = array())
     {
@@ -29,6 +31,7 @@ class Postage extends Client
      * @param array  $options      Additional parameters
      * 
      * @return Object
+     * @throws \Exception
      */
     public function generateLabel($outputFormat, $letter, $options = array())
     {
@@ -53,5 +56,6 @@ class Postage extends Client
             );
         }
 
+        return $result;
     }
 }
