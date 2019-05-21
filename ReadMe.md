@@ -1,5 +1,7 @@
 # Colissimo Web Sercices PHP SDK
 
+FORKED from DansMaCulotte/colissimo-php
+
 This library aims to facilitate the usage of Colissimo Web Services
 
 ## Services
@@ -18,7 +20,7 @@ This library aims to facilitate the usage of Colissimo Web Services
 You can install the package via composer:
 
 ``` bash
-composer require dansmaculotte/colissimo-php
+composer require nateev/colissimo-php
 ```
 
 ## Usage
@@ -26,7 +28,7 @@ composer require dansmaculotte/colissimo-php
 ### Web Services Status
 
 ```php
-use DansMaCulotte\Colissimo\Client;
+use nateev\Colissimo\Client;
 
 try {
     Client::checkWebServiceStatus();
@@ -43,7 +45,7 @@ try {
 #### Find pickup points
 
 ```php
-use DansMaCulotte\Colissimo\DeliveryChoice;
+use nateev\Colissimo\DeliveryChoice;
 
 $delivery = new DeliveryChoice(
     array(
@@ -68,7 +70,7 @@ print_r($result);
 #### Find pickup point by ID
 
 ```php
-use DansMaCulotte\Colissimo\DeliveryChoice;
+use nateev\Colissimo\DeliveryChoice;
 
 $delivery = new DeliveryChoice(
     array(
