@@ -19,12 +19,6 @@
             "DansMaCulotte\\Colissimo\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/nateev/colissimo-php"
-        }
-    ],
     "require": {
         "php": "^7.0",
         "ext-soap": "*",
