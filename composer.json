@@ -1,5 +1,5 @@
 {
-    "name": "dansmaculotte/colissimo-php",
+    "name": "nateev/colissimo-php",
     "description": "Colissimo Web Services PHP library",
     "type": "library",
     "license": "MIT",
@@ -7,7 +7,7 @@
         "colissimo",
         "colissimo-webservices"
     ],
-    "homepage": "https://github.com/dansmaculotte/colissimo-php",
+    "homepage": "https://github.com/nateev/colissimo-php",
     "authors": [
         {
             "name": "Gaël Reyrol",
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "DansMaCulotte\\Colissimo\\": "src/"
+            "nateev\\Colissimo\\": "src/"
         }
     },
     "require": {
