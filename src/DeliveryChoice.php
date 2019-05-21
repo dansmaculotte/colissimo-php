@@ -15,7 +15,7 @@ class DeliveryChoice extends Client
 
     /**
      * Construct Method
-     * 
+     *
      * @param array $credentials Contains login and password for authentication
      * @param array $options     Additional parameters to submit to the web services
      *
@@ -28,17 +28,17 @@ class DeliveryChoice extends Client
 
     /**
      * Retrieve available pickup points by selectors
-     * 
-     * @param string $city         City name 
+     *
+     * @param string $city         City name
      * @param string $zipCode      Zip Code
      * @param string $countryCode  ISO 3166 country code
      * @param string $shippingDate Shipping date (DD/MM/YYYY)
      * @param array  $options      Additional parameters
-     * 
+     *
      * @return PickupPoint[]
      * @throws \Exception
      */
-    public function findPickupPoints(string $city, string $zipCode, string $countryCode, string $shippingDate, array $options = array())
+    public function findPickupPoints(string $city, string $zipCode, string $countryCode, string $shippingDate, int $optionInter, array $options = array())
     {
         $options = array_merge(
             array(
@@ -46,10 +46,11 @@ class DeliveryChoice extends Client
                 'zipCode' => $zipCode,
                 'countryCode' => $countryCode,
                 'shippingDate' => $shippingDate,
+                'optionInter' => $optionInter,
             ),
             $options
         );
-    
+
         $result = $this->soapExec(
             'findRDVPointRetraitAcheminement',
             $options
@@ -75,20 +76,21 @@ class DeliveryChoice extends Client
 
     /**
      * Retreive pickup point by ID
-     * 
+     *
      * @param int    $id           Pickup point ID
      * @param string $shippingDate Shipping date (DD/MM/YYYY)
      * @param array  $options      Additional parameters
-     * 
+     *
      * @return PickupPoint
      * @throws \Exception
      */
-    public function findPickupPointByID(int $id, string $shippingDate, array $options = array())
+    public function findPickupPointByID(string $id, string $shippingDate, string $reseau, array $options = array())
     {
         $options = array_merge(
             array(
                 'id' => $id,
                 'date' => $shippingDate,
+                'reseau' => $reseau,
             ),
             $options
         );
@@ -105,7 +107,7 @@ class DeliveryChoice extends Client
                 'Failed to request delivery points: '.$result->errorMessage
             );
         }
-        
+
         $pickupPoint = new PickupPoint($result->pointRetraitAcheminement);
 
         return $pickupPoint;
