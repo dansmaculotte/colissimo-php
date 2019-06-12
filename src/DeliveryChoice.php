@@ -64,6 +64,11 @@ class DeliveryChoice extends Client
             );
         }
 
+        // Return ok but no pickuppoints
+        if (!isset($result->listePointRetraitAcheminement)) {
+            return [];
+        }
+
         $pickupPoints = array_map(
             function ($pointRetrait) {
                 return new PickupPoint($pointRetrait);
