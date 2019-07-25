@@ -2,7 +2,6 @@
 
 namespace DansMaCulotte\Colissimo;
 
-use DansMaCulotte\Colissimo\Client;
 use DansMaCulotte\Colissimo\Resources\ParcelStatus;
 
 /**
@@ -15,32 +14,32 @@ class ParcelTracking extends Client
 
     /**
      * Construct Method
-     * 
+     *
      * @param array $credentials Contains login and password for authentication
      * @param array $options     Additional parameters to submit to the web services
      *
      * @throws \Exception
      */
-    public function __construct(array $credentials, array $options = array())
+    public function __construct(array $credentials, array $options = [])
     {
         parent::__construct($credentials, self::SERVICE_URL, $options);
     }
 
     /**
      * Retrieve Parcel status by it's ID
-     * 
+     *
      * @param string $id      Colissimo parcel number
      * @param array  $options Additional parameters
-     * 
+     *
      * @return ParcelStatus
      * @throws \Exception
      */
-    public function getStatusByID(string $id, array $options = array())
+    public function getStatusByID(string $id, array $options = [])
     {
         $options = array_merge(
-            array(
+            [
                 'skybillNumber ' => $id,
-            ),
+            ],
             $options
         );
 

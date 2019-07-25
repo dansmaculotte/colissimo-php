@@ -1,6 +1,12 @@
 # Colissimo Web Sercices PHP SDK
 
-This library aims to facilitate the usage of Colissimo Web Services
+[![Latest Version](https://img.shields.io/packagist/v/DansMaCulotte/colissimo-php.svg?style=flat-square)](https://packagist.org/packages/dansmaculotte/colissimo-php)
+[![Total Downloads](https://img.shields.io/packagist/dt/DansMaCulotte/colissimo-php.svg?style=flat-square)](https://packagist.org/packages/dansmaculotte/colissimo-php)
+[![Build Status](https://img.shields.io/travis/DansMaCulotte/colissimo-php/master.svg?style=flat-square)](https://travis-ci.org/dansmaculotte/colissimo-php)
+[![Quality Score](https://img.shields.io/scrutinizer/g/DansMaCulotte/colissimo-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/dansmaculotte/colissimo-php)
+[![Code Coverage](https://img.shields.io/coveralls/github/DansMaCulotte/colissimo-php.svg?style=flat-square)](https://coveralls.io/github/dansmaculotte/colissimo-php)
+
+> This library aims to facilitate the usage of Colissimo Web Services
 
 ## Services
 
@@ -12,7 +18,7 @@ This library aims to facilitate the usage of Colissimo Web Services
 
 ### Requirements
 
-- PHP 7.0
+- PHP 7.2
 - Soap Extension
 
 You can install the package via composer:

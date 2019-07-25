@@ -2,7 +2,6 @@
 
 namespace DansMaCulotte\Colissimo;
 
-use DansMaCulotte\Colissimo\Client;
 use DansMaCulotte\Colissimo\Resources\PickupPoint;
 
 /**
@@ -15,38 +14,38 @@ class DeliveryChoice extends Client
 
     /**
      * Construct Method
-     * 
+     *
      * @param array $credentials Contains login and password for authentication
      * @param array $options     Additional parameters to submit to the web services
      *
      * @throws \Exception
      */
-    public function __construct(array $credentials, array $options = array())
+    public function __construct(array $credentials, array $options = [])
     {
         parent::__construct($credentials, self::SERVICE_URL, $options);
     }
 
     /**
      * Retrieve available pickup points by selectors
-     * 
-     * @param string $city         City name 
+     *
+     * @param string $city         City name
      * @param string $zipCode      Zip Code
      * @param string $countryCode  ISO 3166 country code
      * @param string $shippingDate Shipping date (DD/MM/YYYY)
      * @param array  $options      Additional parameters
-     * 
+     *
      * @return PickupPoint[]
      * @throws \Exception
      */
-    public function findPickupPoints(string $city, string $zipCode, string $countryCode, string $shippingDate, array $options = array())
+    public function findPickupPoints(string $city, string $zipCode, string $countryCode, string $shippingDate, array $options = [])
     {
         $options = array_merge(
-            array(
+            [
                 'city' => $city,
                 'zipCode' => $zipCode,
                 'countryCode' => $countryCode,
                 'shippingDate' => $shippingDate,
-            ),
+            ],
             $options
         );
     
@@ -75,21 +74,21 @@ class DeliveryChoice extends Client
 
     /**
      * Retreive pickup point by ID
-     * 
+     *
      * @param int    $id           Pickup point ID
      * @param string $shippingDate Shipping date (DD/MM/YYYY)
      * @param array  $options      Additional parameters
-     * 
+     *
      * @return PickupPoint
      * @throws \Exception
      */
-    public function findPickupPointByID(int $id, string $shippingDate, array $options = array())
+    public function findPickupPointByID(int $id, string $shippingDate, array $options = [])
     {
         $options = array_merge(
-            array(
+            [
                 'id' => $id,
                 'date' => $shippingDate,
-            ),
+            ],
             $options
         );
 

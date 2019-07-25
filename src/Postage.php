@@ -2,8 +2,6 @@
 
 namespace DansMaCulotte\Colissimo;
 
-use DansMaCulotte\Colissimo\Client;
-
 /**
  * Implementation of Postage Web Service
  * https://www.colissimo.entreprise.laposte.fr/system/files/imagescontent/docs/spec_ws_affranchissement.pdf
@@ -14,13 +12,13 @@ class Postage extends Client
 
     /**
      * Construct Method
-     * 
+     *
      * @param array $credentials Contains login and password for authentication
      * @param array $options     Additional parameters to submit to the web services
      *
      * @throws \Exception
      */
-    public function __construct(array $credentials, array $options = array())
+    public function __construct(array $credentials, array $options = [])
     {
         parent::__construct($credentials, self::SERVICE_URL, $options);
     }
@@ -34,13 +32,13 @@ class Postage extends Client
      * @return Object
      * @throws \Exception
      */
-    public function generateLabel(array $outputFormat, array $letter, bool $check = false, $options = array())
+    public function generateLabel(array $outputFormat, array $letter, bool $check = false, $options = [])
     {
         $options = array_merge(
-            array(
+            [
                 'outputFormat' => $outputFormat,
                 'letter' => $letter,
-            ),
+            ],
             $options
         );
 

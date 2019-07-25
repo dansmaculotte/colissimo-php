@@ -84,32 +84,27 @@ class PickupPoint
         );
 
         if (isset($parameters->listeConges)) {
-
-            $holidays = array();
+            $holidays = [];
             if (is_object($parameters->listeConges)) {
-
                 array_push(
                     $holidays,
-                    array(
+                    [
                         'start' => $parameters->listeConges->calendarDeDebut,
                         'end' => $parameters->listeConges->calendarDeFin,
                         'number' => $parameters->listeConges->numero,
-                    )
-                );  
-
+                    ]
+                );
             } else {
-
                 foreach ($parameters->listeConges as $conges) {
                     array_push(
                         $holidays,
-                        array(
+                        [
                             'start' => $conges->calendarDeDebut,
                             'end' => $conges->calendarDeFin,
                             'number' => $conges->numero,
-                        )
-                    );  
+                        ]
+                    );
                 }
-
             }
 
             $this->holidays = $holidays;
@@ -129,9 +124,9 @@ class PickupPoint
 
     /**
      * Split Range datetime in two datetimes
-     * 
+     *
      * @param string $hours Range datetime e.g. 09:45-12:30 14:00-18:30
-     * 
+     *
      * @return array
      */
     private function _formatRangeTime($hours)
@@ -139,7 +134,7 @@ class PickupPoint
         $partialOpenings = explode(' ', $hours);
 
         if (count($partialOpenings) != 2) {
-            return array();
+            return [];
         }
 
         $validOpenings = array_filter(
@@ -150,9 +145,9 @@ class PickupPoint
         );
 
         if (count($validOpenings) == 2 && $validOpenings[0] == $validOpenings[1]) {
-            return array(
+            return [
                 $validOpenings[0]
-            );
+            ];
         }
 
         return $validOpenings;

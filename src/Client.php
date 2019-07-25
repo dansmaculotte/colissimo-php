@@ -2,12 +2,11 @@
 
 namespace DansMaCulotte\Colissimo;
 
-use Zend\Soap\Client as SoapClient;
 use GuzzleHttp\Client as HttpClient;
+use Zend\Soap\Client as SoapClient;
 
 class Client
 {
-    
     const STATUS_URL = 'https://ws.colissimo.fr/supervision-wspudo/supervision.jsp';
 
     private $_soapClient;
@@ -16,7 +15,7 @@ class Client
 
     /**
      * Construct method to build soap client and options
-     * 
+     *
      * @param array  $credentials Contains login and password items
      * @param string $url         Url to use for SOAP client
      * @param array  $options     Options to use for SOAP client
@@ -35,14 +34,14 @@ class Client
             throw new \Exception('You must provide a password to authenticate with Colissimo Web Services');
         }
 
-        $this->_soapOptions = array(
+        $this->_soapOptions = [
             'soap_version' => SOAP_1_1,
-        );
+        ];
 
-        $this->_credentials = array(
+        $this->_credentials = [
             'accountNumber' =>  $credentials['login'],
             'password' => $credentials['password'],
-        );
+        ];
 
         $this->_soapClient = new SoapClient(
             $url,
@@ -52,7 +51,7 @@ class Client
 
     /**
      * Check Web Services Endpoint and verify if response contains OK string
-     * 
+     *
      * @return bool
      * @throws \GuzzleHttp\Exception\GuzzleException|\Exception
      */
@@ -74,10 +73,10 @@ class Client
 
     /**
      * Proxy method to automaticaly inject credentials and options
-     * 
+     *
      * @param array $method Method to with SOAP web services
      * @param array $params Parameters to send with method
-     * 
+     *
      * @return Object
      */
     public function soapExec(string $method, array $params)

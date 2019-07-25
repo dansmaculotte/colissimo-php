@@ -1,7 +1,7 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 use DansMaCulotte\Colissimo\Client;
+use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
 {

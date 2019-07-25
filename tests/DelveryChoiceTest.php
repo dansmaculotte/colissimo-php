@@ -1,9 +1,9 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+use Carbon\Carbon;
 use DansMaCulotte\Colissimo\DeliveryChoice;
 use DansMaCulotte\Colissimo\Resources\PickupPoint;
-use Carbon\Carbon;
+use PHPUnit\Framework\TestCase;
 
 require_once 'Credentials.php';
 
@@ -12,10 +12,10 @@ class DeliveryChoiceTest extends TestCase
     public function testDeliveryChoice()
     {
         $delivery = new DeliveryChoice(
-            array(
+            [
                 'login' => COLISSIMO_LOGIN,
                 'password' => COLISSIMO_PASSWORD,
-            )
+            ]
         );
 
         $result = $delivery->findPickupPoints(
@@ -23,9 +23,9 @@ class DeliveryChoiceTest extends TestCase
             '14000',
             'FR',
             Carbon::now()->format('d/m/Y'),
-            array(
+            [
                 'address' => '7 rue Mélingue',
-            )
+            ]
         );
 
         $this->assertInternalType('array', $result);
@@ -34,10 +34,10 @@ class DeliveryChoiceTest extends TestCase
     public function testDeliveryChoiceByID()
     {
         $delivery = new DeliveryChoice(
-            array(
+            [
                 'login' => COLISSIMO_LOGIN,
                 'password' => COLISSIMO_PASSWORD,
-            )
+            ]
         );
 
         $result = $delivery->findPickupPointByID(
