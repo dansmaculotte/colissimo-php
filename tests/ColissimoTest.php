@@ -1,13 +1,13 @@
 <?php
 
+use DansMaCulotte\Colissimo\Colissimo;
 use PHPUnit\Framework\TestCase;
-use DansMaCulotte\Colissimo\Client;
 
-class ClientTest extends TestCase
+class ColissimoTest extends TestCase
 {
     public function testCheckWebServiceStatus()
     {
-        $result = Client::checkWebServiceStatus();
+        $result = Colissimo::checkWebServiceStatus();
 
         $this->assertTrue($result);
     }

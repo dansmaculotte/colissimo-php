@@ -1,6 +1,6 @@
 # Colissimo Web Sercices PHP SDK
 
-This library aims to facilitate the usage of Colissimo Web Services
+> This library aims to facilitate the usage of Colissimo Web Services
 
 ## Services
 
@@ -12,8 +12,8 @@ This library aims to facilitate the usage of Colissimo Web Services
 
 ### Requirements
 
-- PHP 7.0
-- Soap Extension
+- PHP 7.2
+- Json Extension
 
 You can install the package via composer:
 
@@ -46,10 +46,10 @@ try {
 use DansMaCulotte\Colissimo\DeliveryChoice;
 
 $delivery = new DeliveryChoice(
-    array(
-        'login' => COLISSIMO_LOGIN,
+    [
+        'accountNumber' => COLISSIMO_LOGIN,
         'password' => COLISSIMO_PASSWORD,
-    )
+    ]
 );
 
 $result = $delivery->findPickupPoints(
@@ -57,9 +57,9 @@ $result = $delivery->findPickupPoints(
     '14000',
     'FR',
     Carbon::now()->format('d/m/Y'),
-    array(
+    [
         'address' => '7 rue Mélingue',
-    )
+    ]
 );
 
 print_r($result);
@@ -71,10 +71,10 @@ print_r($result);
 use DansMaCulotte\Colissimo\DeliveryChoice;
 
 $delivery = new DeliveryChoice(
-    array(
-        'login' => COLISSIMO_LOGIN,
+    [
+        'accountNumber' => COLISSIMO_LOGIN,
         'password' => COLISSIMO_PASSWORD,
-    )
+    ]
 );
 
 $result = $delivery->findPickupPointByID(
