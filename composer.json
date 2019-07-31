@@ -19,24 +19,25 @@
             "DansMaCulotte\\Colissimo\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "DansMaCulotte\\Colissimo\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "php": "^7.2",
-        "ext-soap": "*",
-        "zendframework/zend-soap": "^2.7",
+        "ext-json": "*",
+        "ext-simplexml": "*",
         "guzzlehttp/guzzle": "^6.3",
         "spatie/opening-hours": "^2.6"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.15",
+        "phpunit/phpunit": "^8.2",
         "nesbot/carbon": "^2.21",
-        "phpunit/phpunit": "^8.2"
+        "friendsofphp/php-cs-fixer": "^2.15"
     },
     "scripts": {
         "test": "@php vendor/bin/phpunit",
-        "coverage": "@php vendor/bin/phpunit --coverage-html coverage",
         "format": "@php vendor/bin/php-cs-fixer fix --config .php_cs.php"
-    },
-    "config": {
-        "sort-packages": true
     }
 }

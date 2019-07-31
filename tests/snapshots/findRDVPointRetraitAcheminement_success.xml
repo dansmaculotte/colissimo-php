@@ -1,0 +1,770 @@
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:findRDVPointRetraitAcheminementResponse
+            xmlns:ns2="http://v2.pointretrait.geopost.com/">
+            <return>
+                <errorCode>0</errorCode>
+                <errorMessage>Code retour OK</errorMessage>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>2 RUE GEORGES LEBRET</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.180098</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.364058</coordGeolocalisationLongitude>
+                    <distanceEnMetre>127</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>08:30-18:30 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-18:30 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>08:30-18:30 00:00-00:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>08:30-18:30 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-13:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>08:30-18:30 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>149390</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN GAMBETTA</nom>
+                    <periodeActiviteHoraireDeb>22/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>93 RUE DE BERNIERES</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.181493</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.36093</coordGeolocalisationLongitude>
+                    <distanceEnMetre>229</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:30-18:00 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>13:30-18:00 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:30-18:00 00:00-00:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:30-18:00 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:30-18:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:30-18:00 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>108285</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>FRANCE LOISIRS</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>56 RUE SAINT JEAN</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.181666</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.359166</coordGeolocalisationLongitude>
+                    <distanceEnMetre>324</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>06:45-19:15 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>06:45-19:15 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>06:45-19:15 00:00-00:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>06:45-19:15 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>07:45-19:15 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>06:45-19:15 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>004962</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>LE KHEDIVE</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>142 RUE SAINT JEAN</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.179444</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.357777</coordGeolocalisationLongitude>
+                    <distanceEnMetre>339</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-12:30 14:00-18:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-12:30 14:00-18:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-12:30 14:00-18:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-12:30 14:00-18:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>10:00-12:30 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-12:30 14:00-18:00</horairesOuvertureVendredi>
+                    <identifiant>096191</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>OPENBURO</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>50 QUAI VENDEUVRE</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.181694</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.353459</coordGeolocalisationLongitude>
+                    <distanceEnMetre>689</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-12:30 13:30-18:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-12:30 13:30-18:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-12:30 13:30-18:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-12:30 13:30-18:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-12:30 13:30-18:00</horairesOuvertureVendredi>
+                    <identifiant>149200</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN VENDEUVRE BP</nom>
+                    <periodeActiviteHoraireDeb>29/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>24/08</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>45 RUE DE FALAISE</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.173292</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.354089</coordGeolocalisationLongitude>
+                    <distanceEnMetre>934</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-12:00 14:00-17:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-12:00 14:00-17:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-12:00 14:00-17:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-12:00 14:00-17:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-12:00 14:00-17:00</horairesOuvertureVendredi>
+                    <identifiant>149210</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN VAUCELLES BP</nom>
+                    <periodeActiviteHoraireDeb>22/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>3 RUE DE BAYEUX</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>true</congesTotal>
+                    <coordGeolocalisationLatitude>49.18233</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.3752</coordGeolocalisationLongitude>
+                    <distanceEnMetre>974</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>08:15-12:15 14:15-19:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>00:00-00:00 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>08:15-12:15 14:15-19:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>08:15-12:15 14:15-19:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>08:15-12:15 14:15-18:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>08:15-12:15 14:15-19:00</horairesOuvertureVendredi>
+                    <identifiant>104619</identifiant>
+                    <indiceDeLocalisation/>
+                    <listeConges>
+                        <calendarDeDebut>2019-08-01T00:00:00+02:00</calendarDeDebut>
+                        <calendarDeFin>2019-08-17T00:00:00+02:00</calendarDeFin>
+                        <numero>1</numero>
+                    </listeConges>
+                    <localite>CAEN</localite>
+                    <nom>PRESSING SAINT ETIENNE</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>14 PLACE DE LA GARE</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.175277</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.348611</coordGeolocalisationLongitude>
+                    <distanceEnMetre>1117</distanceEnMetre>
+                    <horairesOuvertureDimanche>08:00-22:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>07:00-22:00 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>07:00-22:00 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>07:00-22:00 00:00-00:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>07:00-22:00 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>07:00-22:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>07:00-22:00 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>997204</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>LA GITANE</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>60 RUE SAINT OUEN</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>true</congesTotal>
+                    <coordGeolocalisationLatitude>49.175106</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.377789</coordGeolocalisationLongitude>
+                    <distanceEnMetre>1227</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>07:00-19:00 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>07:00-19:00 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>07:00-19:00 00:00-00:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>07:00-19:00 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>07:30-12:30 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>07:00-19:00 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>102760</identifiant>
+                    <indiceDeLocalisation/>
+                    <listeConges>
+                        <calendarDeDebut>2019-07-20T00:00:00+02:00</calendarDeDebut>
+                        <calendarDeFin>2019-08-12T00:00:00+02:00</calendarDeFin>
+                        <numero>1</numero>
+                    </listeConges>
+                    <localite>CAEN</localite>
+                    <nom>TABAC PRESSE SAINT OUEN</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>26 LOUIS LE CHATELLIER</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>true</congesTotal>
+                    <coordGeolocalisationLatitude>49.165338</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.360263</coordGeolocalisationLongitude>
+                    <distanceEnMetre>1603</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>07:30-12:30 14:30-19:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>07:30-12:30 14:30-19:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>07:30-12:30 14:30-19:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>07:30-12:30 14:30-19:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>07:30-12:30 14:30-19:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>07:30-12:30 14:30-19:00</horairesOuvertureVendredi>
+                    <identifiant>104582</identifiant>
+                    <indiceDeLocalisation/>
+                    <listeConges>
+                        <calendarDeDebut>2019-07-14T00:00:00+02:00</calendarDeDebut>
+                        <calendarDeFin>2019-08-18T00:00:00+02:00</calendarDeFin>
+                        <numero>1</numero>
+                    </listeConges>
+                    <localite>CAEN</localite>
+                    <nom>TABAC PRESSE LOTO</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>11 PLACE DE LA DEMI LUNE</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>true</congesTotal>
+                    <coordGeolocalisationLatitude>49.175095</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.337386</coordGeolocalisationLongitude>
+                    <distanceEnMetre>1890</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-12:00 14:00-17:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-12:00 14:00-17:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-12:00 14:00-17:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-12:00 14:00-17:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-12:00 14:00-17:00</horairesOuvertureVendredi>
+                    <identifiant>149550</identifiant>
+                    <indiceDeLocalisation/>
+                    <listeConges>
+                        <calendarDeDebut>2019-08-03T00:00:00+02:00</calendarDeDebut>
+                        <calendarDeFin>2019-08-03T00:00:00+02:00</calendarDeFin>
+                        <numero>4</numero>
+                    </listeConges>
+                    <listeConges>
+                        <calendarDeDebut>2019-08-02T00:00:00+02:00</calendarDeDebut>
+                        <calendarDeFin>2019-08-03T00:00:00+02:00</calendarDeFin>
+                        <numero>3</numero>
+                    </listeConges>
+                    <listeConges>
+                        <calendarDeDebut>2019-08-01T00:00:00+02:00</calendarDeDebut>
+                        <calendarDeFin>2019-08-02T00:00:00+02:00</calendarDeFin>
+                        <numero>2</numero>
+                    </listeConges>
+                    <listeConges>
+                        <calendarDeDebut>2019-07-31T00:00:00+02:00</calendarDeDebut>
+                        <calendarDeFin>2019-08-01T00:00:00+02:00</calendarDeFin>
+                        <numero>1</numero>
+                    </listeConges>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN DEMI LUNE BP</nom>
+                    <periodeActiviteHoraireDeb>05/08</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>61 BOULEVARD ANDRE DETOLLE</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.177794</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.388813</coordGeolocalisationLongitude>
+                    <distanceEnMetre>1929</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-18:00 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-18:00 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-18:00 00:00-00:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-18:00 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:15 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-18:00 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>141180</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN DETOLLE</nom>
+                    <periodeActiviteHoraireDeb>22/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>41 AVENUE PERE CHARLES DE FOUCAULD</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.161492</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.36152</coordGeolocalisationLongitude>
+                    <distanceEnMetre>2023</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-12:00 14:00-17:30</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-12:00 14:00-17:30</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-12:00 14:00-17:30</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-12:00 14:00-17:30</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-12:00 14:00-17:30</horairesOuvertureVendredi>
+                    <identifiant>149270</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN GRACE DE DIEU BP</nom>
+                    <periodeActiviteHoraireDeb>22/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>3 RUE D ANISY</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.198796</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.365313</coordGeolocalisationLongitude>
+                    <distanceEnMetre>2136</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-12:00 14:00-17:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-12:00 14:00-17:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-12:00 14:00-17:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-12:00 14:00-17:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-12:00 14:00-17:00</horairesOuvertureVendredi>
+                    <identifiant>149340</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN CALVAIRE ST PIERRE BP</nom>
+                    <periodeActiviteHoraireDeb>22/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>193 RUE DE BAYEUX</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.183842</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.392645</coordGeolocalisationLongitude>
+                    <distanceEnMetre>2244</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>07:00-12:00 13:00-19:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>07:00-12:00 13:00-19:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>07:00-12:00 13:00-19:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>07:00-12:00 13:00-19:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>07:00-12:00 13:00-19:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>07:00-12:00 13:00-19:00</horairesOuvertureVendredi>
+                    <identifiant>103283</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>LE BAYEUX</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>64 AVENUE DE PARIS</adresse1>
+                    <adresse2>MONDEVILLE</adresse2>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.172777</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.332777</coordGeolocalisationLongitude>
+                    <distanceEnMetre>2288</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 15:00-19:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>08:00-12:30 14:30-20:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>08:00-12:30 14:30-20:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>08:00-12:30 14:30-20:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>08:00-12:30 14:30-20:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>08:00-12:30 14:30-20:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>08:00-12:30 14:30-20:00</horairesOuvertureVendredi>
+                    <identifiant>002190</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>TABAC LE VINI</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>13 PLACE CHAMPLAIN</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.198096</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.347251</coordGeolocalisationLongitude>
+                    <distanceEnMetre>2326</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:30-12:30 14:00-17:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:30-12:30 14:00-17:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:30-12:30 14:00-17:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:30-12:30 14:00-17:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:30-12:30 14:00-17:00</horairesOuvertureVendredi>
+                    <identifiant>149490</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN PIERRE HEUZE BP</nom>
+                    <periodeActiviteHoraireDeb>22/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>9 PLACE DE LA JUSTICE</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.161798</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.344277</coordGeolocalisationLongitude>
+                    <distanceEnMetre>2386</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-17:30 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-17:30 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-12:00 14:00-17:30</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-17:30 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-17:30 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>149240</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN GUERINIERE</nom>
+                    <periodeActiviteHoraireDeb>01/08</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>9 RUE PIERRE CORNEILLE</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.192593</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.391544</coordGeolocalisationLongitude>
+                    <distanceEnMetre>2557</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>09:00-12:30 14:00-18:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-12:30 14:00-18:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>09:00-12:00 14:00-18:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>09:00-12:30 14:00-18:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-12:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>09:00-12:30 14:00-18:00</horairesOuvertureVendredi>
+                    <identifiant>149450</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN CHEMIN VERT</nom>
+                    <periodeActiviteHoraireDeb>22/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </listePointRetraitAcheminement>
+                <listePointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>false</accesPersonneMobiliteReduite>
+                    <adresse1>24 PLACE DE LA LIBERTE</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.160176</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.343519</coordGeolocalisationLongitude>
+                    <distanceEnMetre>2568</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>06:30-19:00 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>06:30-19:00 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>06:30-19:00 00:00-00:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>06:30-19:00 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>07:00-12:30 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>06:30-19:00 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>104567</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>TABAC PRESSE SNACK</nom>
+                    <periodeActiviteHoraireDeb>01/01</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>31/12</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>A2P</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R03</reseau>
+                    <distributionSort>14P41</distributionSort>
+                    <lotAcheminement>CFR0</lotAcheminement>
+                    <versionPlanTri>3</versionPlanTri>
+                </listePointRetraitAcheminement>
+                <qualiteReponse>2</qualiteReponse>
+                <wsRequestId>7b32ba28c3d16adb9a76e75085600f662d947330c25b903517afa62ca0a6dcaa</wsRequestId>
+                <rdv>false</rdv>
+            </return>
+        </ns2:findRDVPointRetraitAcheminementResponse>
+    </soap:Body>
+</soap:Envelope>
