@@ -1,0 +1,12 @@
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns1:trackResponse
+            xmlns:ns1="http://chargeur.tracking.geopost.com/">
+            <return>
+                <errorCode>201</errorCode>
+                <errorMessage>Identifiant / mot de passe invalide</errorMessage>
+            </return>
+        </ns1:trackResponse>
+    </soap:Body>
+</soap:Envelope>

@@ -2,14 +2,16 @@
 
 namespace DansMaCulotte\Colissimo;
 
+use DansMaCulotte\Colissimo\Exceptions\Exception;
 use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Exception\GuzzleException;
 
 class Colissimo
 {
     const STATUS_URL = 'https://ws.colissimo.fr/supervision-wspudo/supervision.jsp';
 
-    private $_httpClient;
-    private $_credentials;
+    public $httpClient;
+    protected $credentials;
 
     /**
      * Construct method to build soap client and options
@@ -17,24 +19,24 @@ class Colissimo
      * @param array $credentials Contains login, password and/or apiKey items
      * @param string $url Url to use for SOAP client
      */
-    public function __construct($credentials, $url)
+    public function __construct($credentials = [], $url = null)
     {
         if (isset($credentials['accountNumber']) && isset($credentials['password'])) {
-            $this->_credentials = [
+            $this->credentials = [
                 'accountNumber' =>  $credentials['accountNumber'],
                 'password' => $credentials['password'],
             ];
         }
 
         if (isset($credentials['apikey'])) {
-            $this->_credentials['apikey'] = $credentials['apikey'];
+            $this->credentials['apikey'] = $credentials['apikey'];
         }
 
         if (isset($credentials['codTiersPourPartenaire'])) {
-            $this->_credentials['codTiersPourPartenaire'] = $credentials['codTiersPourPartenaire'];
+            $this->credentials['codTiersPourPartenaire'] = $credentials['codTiersPourPartenaire'];
         }
 
-        $this->_httpClient = new HttpClient([
+        $this->httpClient = new HttpClient([
             'base_uri' => $url,
         ]);
     }
@@ -43,19 +45,19 @@ class Colissimo
      * Check Web Services Endpoint and verify if response contains OK string
      *
      * @return bool
-     * @throws \GuzzleHttp\Exception\GuzzleException|\Exception
+     * @throws Exception
      */
-    public static function checkWebServiceStatus()
+    public function checkWebServiceStatus()
     {
-        $client = new HttpClient();
-        $response = $client->request('GET', self::STATUS_URL);
+        try {
+            $response = $this->httpClient->request('GET', self::STATUS_URL);
 
-        if ($response->getStatusCode() != 200) {
-            throw new \Exception('Colissimo Web Services Status Code Error');
-        }
-
-        if (preg_match_all('/OK/m', $response->getBody()) == false) {
-            throw new \Exception('Colissimo Web Services KO');
+            $isOk = preg_match_all('/OK/m', (string) $response->getBody());
+            if ($isOk == false) {
+                throw Exception::serviceUnavailable();
+            }
+        } catch (GuzzleException $e) {
+            throw Exception::serviceUnavailable();
         }
 
         return true;
@@ -72,25 +74,34 @@ class Colissimo
      */
     public function httpRequest(string $method, array $params)
     {
-        return $this->_httpClient->request('GET', $method, [
+        return $this->httpClient->request('GET', $method, [
             'query' => array_merge(
-                $this->_credentials,
+                $this->credentials,
                 $params
             )
         ]);
     }
 
     /**
+     * Parse service errors and throw if code match
+     *
      * @param int $code
      * @param array $errors
-     * @return string|null
+     *
+     * @throws Exception
      */
-    protected function parseErrorCode(int $code, array $errors)
+    protected function parseErrorCodeAndThrow(int $code, array $errors)
     {
+        $message = null;
+        
         if (isset($errors[$code])) {
-            return $errors[$code];
+            $message = $errors[$code];
         }
-
-        return null;
+        
+        if ($message) {
+            throw Exception::requestError($message);
+        }
+        
+        return ;
     }
 }

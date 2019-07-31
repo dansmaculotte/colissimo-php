@@ -10,7 +10,10 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
 class TestCase extends BaseTestCase
 {
     /** @var array */
-    public $credentials = [];
+    public $credentials = [
+        'accountNumber' => 'anaccount',
+        'password' => 'apassword',
+    ];
 
     protected function buildClientMock(MockHandler $mock)
     {

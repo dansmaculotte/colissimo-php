@@ -1,0 +1,19 @@
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns1:trackResponse
+            xmlns:ns1="http://chargeur.tracking.geopost.com/">
+            <return>
+                <errorCode>0</errorCode>
+                <eventCode>RENAVI</eventCode>
+                <eventDate>2009-05-18T00:00:00+02:00</eventDate>
+                <eventLibelle>Rendu -destinataire avisé</eventLibelle>
+                <eventSite>Agence Seine Maritime </eventSite>
+                <recipientCity>Sainte-Gemme Moronval</recipientCity>
+                <recipientCountryCode>FR</recipientCountryCode>
+                <recipientZipCode>28500</recipientZipCode>
+                <skybillNumber>8V12345678901</skybillNumber>
+            </return>
+        </ns1:trackResponse>
+    </soap:Body>
+</soap:Envelope>

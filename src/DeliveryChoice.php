@@ -74,7 +74,7 @@ class DeliveryChoice extends Colissimo
         string $shippingDate,
         array $options = []
     ) {
-        $options = array_merge(
+        $params = array_merge(
             [
                 'city' => $city,
                 'zipCode' => $zipCode,
@@ -86,15 +86,14 @@ class DeliveryChoice extends Colissimo
     
         $response = $this->httpRequest(
             'findRDVPointRetraitAcheminement',
-            $options
+            $params
         );
         
         $xml = new SimpleXMLElement((string) $response->getBody());
         
         $return = $xml->xpath('//return');
         if (count($return) && $return[0]->errorCode != 0) {
-            $error = $this->parseErrorCode($return[0]->errorCode, self::ERRORS);
-            throw Exception::requestError($error);
+            $this->parseErrorCodeAndThrow((int) $return[0]->errorCode, self::ERRORS);
         }
 
         $pickupPoints = [];
@@ -168,11 +167,10 @@ class DeliveryChoice extends Colissimo
         );
 
         $xml = new SimpleXMLElement((string) $response->getBody());
-
+        
         $return = $xml->xpath('//return');
         if (count($return) && $return[0]->errorCode != 0) {
-            $error = $this->parseErrorCode($return[0]->errorCode, self::ERRORS);
-            throw Exception::requestError($error);
+            $this->parseErrorCodeAndThrow((int) $return[0]->errorCode, self::ERRORS);
         }
         
         $rawPickupPoint = $xml->xpath('//pointRetraitAcheminement');

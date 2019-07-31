@@ -1,0 +1,12 @@
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:findPointRetraitAcheminementByIDResponse
+            xmlns:ns2="http://v2.pointretrait.geopost.com/">
+            <return>
+                <errorCode>201</errorCode>
+                <errorMessage>Identifiant / mot de passe invalide</errorMessage>
+            </return>
+        </ns2:findPointRetraitAcheminementByIDResponse>
+    </soap:Body>
+</soap:Envelope>

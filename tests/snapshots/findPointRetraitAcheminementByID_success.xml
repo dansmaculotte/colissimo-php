@@ -1,0 +1,48 @@
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:findPointRetraitAcheminementByIDResponse
+            xmlns:ns2="http://v2.pointretrait.geopost.com/">
+            <return>
+                <errorCode>0</errorCode>
+                <errorMessage>Code retour OK</errorMessage>
+                <pointRetraitAcheminement>
+                    <accesPersonneMobiliteReduite>true</accesPersonneMobiliteReduite>
+                    <adresse1>2 RUE GEORGES LEBRET</adresse1>
+                    <adresse2/>
+                    <adresse3/>
+                    <codePostal>14000</codePostal>
+                    <congesPartiel>false</congesPartiel>
+                    <congesTotal>false</congesTotal>
+                    <coordGeolocalisationLatitude>49.180098</coordGeolocalisationLatitude>
+                    <coordGeolocalisationLongitude>-0.364058</coordGeolocalisationLongitude>
+                    <distanceEnMetre>-1</distanceEnMetre>
+                    <horairesOuvertureDimanche>00:00-00:00 00:00-00:00</horairesOuvertureDimanche>
+                    <horairesOuvertureJeudi>08:30-18:30 00:00-00:00</horairesOuvertureJeudi>
+                    <horairesOuvertureLundi>09:00-18:30 00:00-00:00</horairesOuvertureLundi>
+                    <horairesOuvertureMardi>08:30-18:30 00:00-00:00</horairesOuvertureMardi>
+                    <horairesOuvertureMercredi>08:30-18:30 00:00-00:00</horairesOuvertureMercredi>
+                    <horairesOuvertureSamedi>09:00-13:00 00:00-00:00</horairesOuvertureSamedi>
+                    <horairesOuvertureVendredi>08:30-18:30 00:00-00:00</horairesOuvertureVendredi>
+                    <identifiant>149390</identifiant>
+                    <indiceDeLocalisation/>
+                    <localite>CAEN</localite>
+                    <nom>BUREAU DE POSTE CAEN GAMBETTA</nom>
+                    <periodeActiviteHoraireDeb>22/07</periodeActiviteHoraireDeb>
+                    <periodeActiviteHoraireFin>25/10</periodeActiviteHoraireFin>
+                    <poidsMaxi>20000</poidsMaxi>
+                    <typeDePoint>BPR</typeDePoint>
+                    <codePays>FR</codePays>
+                    <langue>FR</langue>
+                    <libellePays>FRANCE</libellePays>
+                    <loanOfHandlingTool>false</loanOfHandlingTool>
+                    <parking>false</parking>
+                    <reseau>R01</reseau>
+                    <distributionSort/>
+                    <lotAcheminement/>
+                    <versionPlanTri/>
+                </pointRetraitAcheminement>
+            </return>
+        </ns2:findPointRetraitAcheminementByIDResponse>
+    </soap:Body>
+</soap:Envelope>

@@ -50,7 +50,7 @@ class ParcelTracking extends Colissimo
     {
         $options = array_merge(
             [
-                'skybillNumber ' => $id,
+                'skybillNumber' => $id,
             ],
             $options
         );
@@ -64,8 +64,7 @@ class ParcelTracking extends Colissimo
 
         $return = $xml->xpath('//return');
         if (count($return) && $return[0]->errorCode != 0) {
-            $error = $this->parseErrorCode($return[0]->errorCode, self::ERRORS);
-            throw Exception::requestError($error);
+            $this->parseErrorCodeAndThrow((int) $return[0]->errorCode, self::ERRORS);
         }
 
         $parcelStatus = new ParcelStatus(
