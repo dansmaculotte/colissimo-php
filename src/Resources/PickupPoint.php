@@ -29,7 +29,7 @@ class PickupPoint
      * @param string $horairesOuvertureDimanche
      * @param string $identifiant
      * @param string $indiceDeLocalisation
-     * @param object $listeConges
+     * @param mixed $listeConges
      * @param string $localite
      * @param string $nom
      * @param string $periodeActiviteHoraireDeb
@@ -85,8 +85,7 @@ class PickupPoint
         string $distributionSort,
         string $lotAcheminement,
         string $versionPlanTri
-    )
-    {
+    ) {
         $this->data['id'] = $identifiant;
         $this->data['name'] = $nom;
         $this->data['disabledPersonAccess'] = $accesPersonneMobiliteReduite;

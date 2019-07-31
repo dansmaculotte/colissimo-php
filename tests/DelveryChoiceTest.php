@@ -1,22 +1,16 @@
 <?php
 
+namespace DansMaCulotte\Colissimo\Tests;
+
 use Carbon\Carbon;
 use DansMaCulotte\Colissimo\DeliveryChoice;
 use DansMaCulotte\Colissimo\Resources\PickupPoint;
-use PHPUnit\Framework\TestCase;
-
-require_once 'Credentials.php';
 
 class DeliveryChoiceTest extends TestCase
 {
     public function testDeliveryChoice()
     {
-        $delivery = new DeliveryChoice(
-            [
-                'accountNumber' => COLISSIMO_LOGIN,
-                'password' => COLISSIMO_PASSWORD,
-            ]
-        );
+        $delivery = new DeliveryChoice($this->credentials);
         
         $result = $delivery->findPickupPoints(
             'Caen',
@@ -33,12 +27,7 @@ class DeliveryChoiceTest extends TestCase
 
     public function testDeliveryChoiceByID()
     {
-        $delivery = new DeliveryChoice(
-            [
-                'accountNumber' => COLISSIMO_LOGIN,
-                'password' => COLISSIMO_PASSWORD,
-            ]
-        );
+        $delivery = new DeliveryChoice($this->credentials);
 
         $result = $delivery->findPickupPointByID(
             '149390',

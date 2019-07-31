@@ -1,7 +1,8 @@
 <?php
 
+namespace DansMaCulotte\Colissimo\Tests;
+
 use DansMaCulotte\Colissimo\Colissimo;
-use PHPUnit\Framework\TestCase;
 
 class ColissimoTest extends TestCase
 {

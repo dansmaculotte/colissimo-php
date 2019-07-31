@@ -3,7 +3,6 @@
 namespace DansMaCulotte\Colissimo;
 
 use GuzzleHttp\Client as HttpClient;
-use Zend\Soap\Client as SoapClient;
 
 class Colissimo
 {
@@ -64,10 +63,10 @@ class Colissimo
     
     /**
      * Proxy method to automatically inject credentials
-     * 
+     *
      * @param string $method
      * @param array $params
-     * 
+     *
      * @return mixed|\Psr\Http\Message\ResponseInterface
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
@@ -79,5 +78,19 @@ class Colissimo
                 $params
             )
         ]);
+    }
+
+    /**
+     * @param int $code
+     * @param array $errors
+     * @return string|null
+     */
+    protected function parseErrorCode(int $code, array $errors)
+    {
+        if (isset($errors[$code])) {
+            return $errors[$code];
+        }
+
+        return null;
     }
 }
