@@ -18,8 +18,9 @@ class Colissimo
      *
      * @param array $credentials Contains login, password and/or apiKey items
      * @param string $url Url to use for SOAP client
+     * @param array $options Guzzle Client options
      */
-    public function __construct($credentials = [], $url = null)
+    public function __construct(array $credentials = [], $url = null, array $options = [])
     {
         if (isset($credentials['accountNumber']) && isset($credentials['password'])) {
             $this->credentials = [
@@ -36,9 +37,9 @@ class Colissimo
             $this->credentials['codTiersPourPartenaire'] = $credentials['codTiersPourPartenaire'];
         }
 
-        $this->httpClient = new HttpClient([
+        $this->httpClient = new HttpClient(array_merge([
             'base_uri' => $url,
-        ]);
+        ], $options));
     }
 
     /**
@@ -87,7 +88,6 @@ class Colissimo
      *
      * @param int $code
      * @param array $errors
-     *
      * @throws Exception
      */
     protected function parseErrorCodeAndThrow(int $code, array $errors)

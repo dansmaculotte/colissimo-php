@@ -30,8 +30,9 @@ class ParcelTracking extends Colissimo
      * Construct Method
      *
      * @param array $credentials Contains login and password for authentication
+     * @param array $options Guzzle client options
      */
-    public function __construct(array $credentials)
+    public function __construct(array $credentials, array $options = [])
     {
         parent::__construct($credentials, self::SERVICE_URL);
     }

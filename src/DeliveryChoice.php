@@ -43,15 +43,16 @@ class DeliveryChoice extends Colissimo
         301 => 'No pickup points found',
         1000 => 'Internal server error',
     ];
-    
+
     /**
      * Construct Method
      *
      * @param array $credentials Contains accountNumber and password for authentication
+     * @param array $options Guzzle Client options
      */
-    public function __construct(array $credentials)
+    public function __construct(array $credentials, array $options = [])
     {
-        parent::__construct($credentials, self::SERVICE_URL);
+        parent::__construct($credentials, self::SERVICE_URL, $options);
     }
 
     /**
@@ -98,7 +99,7 @@ class DeliveryChoice extends Colissimo
 
         $pickupPoints = [];
         foreach ($xml->xpath('//listePointRetraitAcheminement') as $pickupPoint) {
-            array_push($pickupPoints, new PickupPoint(
+            $pickupPoints[] = new PickupPoint(
                 $pickupPoint->accesPersonneMobiliteReduite,
                 $pickupPoint->adresse1,
                 $pickupPoint->adresse2,
@@ -134,7 +135,7 @@ class DeliveryChoice extends Colissimo
                 $pickupPoint->distributionSort,
                 $pickupPoint->lotAcheminement,
                 $pickupPoint->versionPlanTri
-            ));
+            );
         }
 
         return $pickupPoints;
