@@ -2,21 +2,14 @@
 
 namespace DansMaCulotte\Colissimo\Exceptions;
 
-class Exception extends \Exception
+class Exception extends \RuntimeException
 {
-    /**
-     * @return Exception
-     */
-    public static function serviceUnavailable()
+    public static function serviceUnavailable(): Exception
     {
         return new self("Colissimo Web Service is unavailable");
     }
     
-    /**
-     * @param string $message
-     * @return Exception
-     */
-    public static function requestError(string $message)
+    public static function requestError(string $message): Exception
     {
         return new self("Request returned error: ${message}");
     }
