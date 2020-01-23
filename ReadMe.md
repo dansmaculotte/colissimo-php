@@ -20,6 +20,7 @@
 
 - PHP 7.2
 - Json Extension
+- SimpleXML Extension
 
 You can install the package via composer:
 
