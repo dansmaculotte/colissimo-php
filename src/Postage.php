@@ -8,13 +8,13 @@ use DansMaCulotte\Colissimo\Client;
  * Implementation of Postage Web Service
  * https://www.colissimo.entreprise.laposte.fr/system/files/imagescontent/docs/spec_ws_affranchissement.pdf
  */
-class Postage extends Client
+class Postage extends Colissimo
 {
     const SERVICE_URL = 'https://ws.colissimo.fr/sls-ws/SlsServiceWS/2.0?wsdl';
 
     /**
      * Construct Method
-     * 
+     *
      * @param array $credentials Contains login and password for authentication
      * @param array $options     Additional parameters to submit to the web services
      *
@@ -44,7 +44,7 @@ class Postage extends Client
             $options
         );
 
-        $result = $this->soapExec(
+        $result = $this->httpRequest(
             ($check) ? 'checkGenerateLabel' : 'generateLabel',
             $options
         );

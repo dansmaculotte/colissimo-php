@@ -6,132 +6,175 @@ use Spatie\OpeningHours\OpeningHours;
 
 class PickupPoint
 {
-    public $id;
-    public $name;
-    public $disabledPersonAccess;
-    public $address;
-    public $addressOptional;
-    public $locality;
-    public $city;
-    public $postalCode;
-    public $countryCode;
-    public $partialClosed;
-    public $closed;
-    public $latGeoCoord;
-    public $longGeoCoord;
-    public $range;
-    public $locationHelp;
-    public $openingsDateStart;
-    public $openingsDateEnd;
-    public $openings;
-    public $holidays;
-    public $maxWeight;
-    public $pointType;
-    public $language;
-    public $countryLabel;
-    public $handlingTool;
-    public $parkingArea;
-    public $linkCode;
-    public $distributionSort;
-    public $pickupParcel;
-    public $sortPlanVersion;
+    public $data;
 
-    public function __construct($parameters)
-    {
-        $this->id = $parameters->identifiant;
-        $this->name = $parameters->nom;
-        $this->disabledPersonAccess = $parameters->accesPersonneMobiliteReduite;
-        $this->address = $parameters->adresse1;
-        $this->addressOptional = $parameters->adresse2;
-        $this->locality = $parameters->adresse3;
-        $this->city = $parameters->localite;
-        $this->postalCode = $parameters->codePostal;
-        $this->countryCode = $parameters->codePays;
-        $this->partialClosed = $parameters->congesPartiel;
-        $this->closed = $parameters->congesTotal;
-        $this->latGeoCoord = $parameters->coordGeolocalisationLatitude;
-        $this->longGeoCoord = $parameters->coordGeolocalisationLongitude;
-        $this->range = $parameters->distanceEnMetre;
-        $this->locationHelp = $parameters->indiceDeLocalisation;
-        
-        $this->openingsDateStart = $parameters->periodeActiviteHoraireDeb;
-        $this->openingsDateEnd = $parameters->periodeActiviteHoraireFin;
+    /**
+     * PickupPoint constructor.
+     * @param string $accesPersonneMobiliteReduite
+     * @param string $adresse1
+     * @param string $adresse2
+     * @param string $adresse3
+     * @param string $codePostal
+     * @param string $congesPartiel
+     * @param string $congesTotal
+     * @param string $coordGeolocalisationLatitude
+     * @param string $coordGeolocalisationLongitude
+     * @param string $distanceEnMetre
+     * @param string $horairesOuvertureLundi
+     * @param string $horairesOuvertureMardi
+     * @param string $horairesOuvertureMercredi
+     * @param string $horairesOuvertureJeudi
+     * @param string $horairesOuvertureVendredi
+     * @param string $horairesOuvertureSamedi
+     * @param string $horairesOuvertureDimanche
+     * @param string $identifiant
+     * @param string $indiceDeLocalisation
+     * @param mixed $listeConges
+     * @param string $localite
+     * @param string $nom
+     * @param string $periodeActiviteHoraireDeb
+     * @param string $periodeActiviteHoraireFin
+     * @param string $poidsMaxi
+     * @param string $typeDePoint
+     * @param string $codePays
+     * @param string $langue
+     * @param string $libellePays
+     * @param string $loanOfHandlingTool
+     * @param string $parking
+     * @param string $reseau
+     * @param string $distributionSort
+     * @param string $lotAcheminement
+     * @param string $versionPlanTri
+     * @param string $calendarDeDebut
+     * @param string $calendarDeFin
+     * @param string $numero
+     */
+    public function __construct(
+        string $accesPersonneMobiliteReduite,
+        string $adresse1,
+        string $adresse2,
+        string $adresse3,
+        string $codePostal,
+        string $congesPartiel,
+        string $congesTotal,
+        string $coordGeolocalisationLatitude,
+        string $coordGeolocalisationLongitude,
+        string $distanceEnMetre,
+        string $horairesOuvertureLundi,
+        string $horairesOuvertureMardi,
+        string $horairesOuvertureMercredi,
+        string $horairesOuvertureJeudi,
+        string $horairesOuvertureVendredi,
+        string $horairesOuvertureSamedi,
+        string $horairesOuvertureDimanche,
+        string $identifiant,
+        string $indiceDeLocalisation,
+        object $listeConges,
+        string $localite,
+        string $nom,
+        string $periodeActiviteHoraireDeb,
+        string $periodeActiviteHoraireFin,
+        string $poidsMaxi,
+        string $typeDePoint,
+        string $codePays,
+        string $langue,
+        string $libellePays,
+        string $loanOfHandlingTool,
+        string $parking,
+        string $reseau,
+        string $distributionSort,
+        string $lotAcheminement,
+        string $versionPlanTri
+    ) {
+        $this->data['id'] = $identifiant;
+        $this->data['name'] = $nom;
+        $this->data['disabledPersonAccess'] = $accesPersonneMobiliteReduite;
+        $this->data['streetName'] = $adresse1;
+        $this->data['premise'] = $adresse2;
+        $this->data['locality'] = $adresse3;
+        $this->data['city'] = $localite;
+        $this->data['postalCode'] = $codePostal;
+        $this->data['countryCode'] = $codePays;
+        $this->data['partialClosed'] = $congesPartiel;
+        $this->data['closed'] = $congesTotal;
+        $this->data['latGeoCoord'] = $coordGeolocalisationLatitude;
+        $this->data['longGeoCoord'] = $coordGeolocalisationLongitude;
+        $this->data['range'] = $distanceEnMetre;
+        $this->data['locationHelp'] = $indiceDeLocalisation;
 
-        $this->openings = OpeningHours::create(
+        $this->data['openingsDateStart'] = $periodeActiviteHoraireDeb;
+        $this->data['openingsDateEnd'] = $periodeActiviteHoraireFin;
+
+        $this->data['openings'] = OpeningHours::create(
             [
                 'monday' => $this->_formatRangeTime(
-                    $parameters->horairesOuvertureLundi
+                    $horairesOuvertureLundi
                 ),
                 'tuesday' => $this->_formatRangeTime(
-                    $parameters->horairesOuvertureMardi
+                    $horairesOuvertureMardi
                 ),
                 'wednesday' => $this->_formatRangeTime(
-                    $parameters->horairesOuvertureMercredi
+                    $horairesOuvertureMercredi
                 ),
                 'thursday' => $this->_formatRangeTime(
-                    $parameters->horairesOuvertureJeudi
+                    $horairesOuvertureJeudi
                 ),
                 'friday' => $this->_formatRangeTime(
-                    $parameters->horairesOuvertureVendredi
+                    $horairesOuvertureVendredi
                 ),
                 'saturday' => $this->_formatRangeTime(
-                    $parameters->horairesOuvertureSamedi
+                    $horairesOuvertureSamedi
                 ),
                 'sunday' => $this->_formatRangeTime(
-                    $parameters->horairesOuvertureDimanche
+                    $horairesOuvertureDimanche
                 ),
             ]
         );
 
-        if (isset($parameters->listeConges)) {
-
-            $holidays = array();
-            if (is_object($parameters->listeConges)) {
-
+        if (isset($listeConges)) {
+            $holidays = [];
+            if (is_object($listeConges)) {
                 array_push(
                     $holidays,
-                    array(
-                        'start' => $parameters->listeConges->calendarDeDebut,
-                        'end' => $parameters->listeConges->calendarDeFin,
-                        'number' => $parameters->listeConges->numero,
-                    )
-                );  
-
+                    [
+                        'start' => $listeConges->calendarDeDebut,
+                        'end' => $listeConges->calendarDeFin,
+                        'number' => $listeConges->numero,
+                    ]
+                );
             } else {
-
-                foreach ($parameters->listeConges as $conges) {
+                foreach ($listeConges as $conges) {
                     array_push(
                         $holidays,
-                        array(
+                        [
                             'start' => $conges->calendarDeDebut,
                             'end' => $conges->calendarDeFin,
                             'number' => $conges->numero,
-                        )
-                    );  
+                        ]
+                    );
                 }
-
             }
 
-            $this->holidays = $holidays;
+            $this->data['holidays'] = $holidays;
         }
 
-        $this->maxWeight = $parameters->poidsMaxi;
-        $this->pointType = $parameters->typeDePoint;
-        $this->language = $parameters->langue;
-        $this->countryLabel = $parameters->libellePays;
-        $this->handlingTool = $parameters->loanOfHandlingTool;
-        $this->parkingArea = $parameters->parking;
-        $this->linkCode = $parameters->reseau;
-        $this->distributionSort = $parameters->distributionSort;
-        $this->pickupParcel = $parameters->lotAcheminement;
-        $this->sortPlanVersion = $parameters->versionPlanTri;
+        $this->data['maxWeight'] = $poidsMaxi;
+        $this->data['pointType'] = $typeDePoint;
+        $this->data['language'] = $langue;
+        $this->data['countryLabel'] = $libellePays;
+        $this->data['handlingTool'] = $loanOfHandlingTool;
+        $this->data['parkingArea'] = $parking;
+        $this->data['linkCode'] = $reseau;
+        $this->data['distributionSort'] = $distributionSort;
+        $this->data['pickupParcel'] = $lotAcheminement;
+        $this->data['sortPlanVersion'] = $versionPlanTri;
     }
 
     /**
      * Split Range datetime in two datetimes
-     * 
+     *
      * @param string $hours Range datetime e.g. 09:45-12:30 14:00-18:30
-     * 
+     *
      * @return array
      */
     private function _formatRangeTime($hours)
@@ -139,7 +182,7 @@ class PickupPoint
         $partialOpenings = explode(' ', $hours);
 
         if (count($partialOpenings) != 2) {
-            return array();
+            return [];
         }
 
         $validOpenings = array_filter(
@@ -150,9 +193,9 @@ class PickupPoint
         );
 
         if (count($validOpenings) == 2 && $validOpenings[0] == $validOpenings[1]) {
-            return array(
+            return [
                 $validOpenings[0]
-            );
+            ];
         }
 
         return $validOpenings;
