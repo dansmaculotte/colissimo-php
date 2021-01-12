@@ -73,6 +73,7 @@ class DeliveryChoice extends Colissimo
         string $zipCode,
         string $countryCode,
         string $shippingDate,
+        int $optionInter,
         array $options = []
     ) {
         $params = array_merge(
@@ -81,6 +82,7 @@ class DeliveryChoice extends Colissimo
                 'zipCode' => $zipCode,
                 'countryCode' => $countryCode,
                 'shippingDate' => $shippingDate,
+                'optionInter' => $optionInter,
             ],
             $options
         );
