@@ -154,15 +154,18 @@ class DeliveryChoice extends Colissimo
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws Exception
      */
-    public function findPickupPointByID(int $id, string $shippingDate, array $options = [])
+    public function findPickupPointByID(string $id, string $shippingDate, string $reseau, array $options = [])
     {
         $options = array_merge(
             [
                 'id' => $id,
                 'date' => $shippingDate,
+                'reseau' => $reseau,
             ],
             $options
         );
+
+
 
         $response = $this->httpRequest(
             'findPointRetraitAcheminementByID',
@@ -175,6 +178,7 @@ class DeliveryChoice extends Colissimo
         if (count($return) && $return[0]->errorCode != 0) {
             $this->parseErrorCodeAndThrow((int) $return[0]->errorCode, self::ERRORS);
         }
+
 
         $rawPickupPoint = $xml->xpath('//pointRetraitAcheminement');
         if (count($rawPickupPoint) && $rawPickupPoint[0]) {
