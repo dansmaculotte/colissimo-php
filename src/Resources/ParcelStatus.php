@@ -4,24 +4,25 @@ namespace DansMaCulotte\Colissimo\Resources;
 
 class ParcelStatus
 {
-    public $id;
-    public $code;
-    public $date;
-    public $status;
-    public $site;
-    public $city;
-    public $zipCode;
-    public $countryCode;
+    public $data;
 
-    public function __construct($parameters)
-    {
-        $this->id = $parameters['skybillNumber'];
-        $this->code = $parameters['eventCode'];
-        $this->date = $parameters['eventDate'];
-        $this->status = $parameters['eventLibelle'];
-        $this->site = $parameters['eventSite'];
-        $this->city = $parameters['recipientCity'];
-        $this->zipCode = $parameters['recipientZipCode'];
-        $this->countryCode = $parameters['recipientCountryCode'];
+    public function __construct(
+        string $skybillNumber,
+        string $eventCode,
+        string $eventDate,
+        string $eventLibelle,
+        string $eventSite,
+        string $recipientCity,
+        string $recipientZipCode,
+        string $recipientCountryCode
+    ) {
+        $this->data['id'] = $skybillNumber;
+        $this->data['code'] = $eventCode;
+        $this->data['date'] = $eventDate;
+        $this->data['status'] = $eventLibelle;
+        $this->data['site'] = $eventSite;
+        $this->data['city'] = $recipientCity;
+        $this->data['zipCode'] = $recipientZipCode;
+        $this->data['countryCode'] = $recipientCountryCode;
     }
 }
