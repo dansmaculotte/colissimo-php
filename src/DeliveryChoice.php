@@ -58,6 +58,7 @@ class DeliveryChoice extends Colissimo
     /**
      * Retrieve available pickup points by selectors
      *
+     * @param string $address Address
      * @param string $city City name
      * @param string $zipCode Zip Code
      * @param string $countryCode ISO 3166 country code
@@ -69,6 +70,7 @@ class DeliveryChoice extends Colissimo
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function findPickupPoints(
+        string $address,
         string $city,
         string $zipCode,
         string $countryCode,
@@ -78,6 +80,7 @@ class DeliveryChoice extends Colissimo
     ) {
         $params = array_merge(
             [
+                'city' => $address,
                 'city' => $city,
                 'zipCode' => $zipCode,
                 'countryCode' => $countryCode,
