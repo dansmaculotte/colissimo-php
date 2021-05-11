@@ -80,7 +80,7 @@ class DeliveryChoice extends Colissimo
     ) {
         $params = array_merge(
             [
-                'city' => $address,
+                'address' => $address,
                 'city' => $city,
                 'zipCode' => $zipCode,
                 'countryCode' => $countryCode,
