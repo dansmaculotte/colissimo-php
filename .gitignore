@@ -7,4 +7,4 @@ composer.phar
 # composer.lock
 .php_cs.cache
 .phpunit.result.cache
-build
+build.php-cs-fixer.cache

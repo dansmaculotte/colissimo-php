@@ -12,6 +12,10 @@
         {
             "name": "Gaël Reyrol",
             "email": "gael@dansmaculotte.fr"
+        },
+        {
+            "name": "Romain Touzé",
+            "email": "romain@dansmaculotte.fr"
         }
     ],
     "autoload": {
@@ -25,16 +29,16 @@
         }
     },
     "require": {
-        "php": "^7.2",
+        "php": "^7.2|^8.1",
         "ext-json": "*",
         "ext-simplexml": "*",
         "guzzlehttp/guzzle": "^7.0",
         "spatie/opening-hours": "^2.7"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.5",
-        "nesbot/carbon": "^2.28",
-        "friendsofphp/php-cs-fixer": "^2.16"
+        "phpunit/phpunit": "^9.5",
+        "nesbot/carbon": "^2.57",
+        "friendsofphp/php-cs-fixer": "^3.7"
     },
     "scripts": {
         "test": "@php vendor/bin/phpunit",
